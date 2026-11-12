@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantora Industries</title>
+<link rel="icon" href="favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<meta name="theme-color" content="#14306A">
+<meta property="og:title" content="Quantora Industries">
+<meta property="og:image" content="social/og-image-1200x630.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+body{margin:0;font-family:Poppins,Segoe UI,system-ui,sans-serif;background:#f6f8fc url(backgrounds/bg-light-1920x1080.jpg) center/cover fixed;color:#14306A}
+header{background:#14306A url(backgrounds/bg-navy-1920x1080.jpg) center/cover;padding:12px 24px}
+header img{height:44px}
+.car{position:relative;max-width:1920px;margin:0 auto;overflow:hidden}
+.car .track{display:flex;transition:transform .6s ease}
+.car picture,.car img{display:block;width:100%;flex:0 0 100%}
+.dots{position:absolute;bottom:12px;left:0;right:0;text-align:center}
+.dots button{width:12px;height:12px;border-radius:50%;border:0;margin:0 4px;background:#ffffff88;cursor:pointer}
+.dots button.on{background:#6FA4EA}
+section{max-width:900px;margin:32px auto;padding:0 16px}
+</style></head><body>
+<header><img src="logo/logo-full-for-dark-bg.png" alt="Quantora Industries"></header>
+<div class="car" id="car"><div class="track" id="track">
+<picture><source media="(max-width:700px)" srcset="carousel/slide-1-mobile-1080x1350.jpg"><img src="carousel/slide-1-desktop-1920x720.jpg" alt=""></picture>
+<picture><source media="(max-width:700px)" srcset="carousel/slide-2-mobile-1080x1350.jpg"><img src="carousel/slide-2-desktop-1920x720.jpg" alt=""></picture>
+<picture><source media="(max-width:700px)" srcset="carousel/slide-3-mobile-1080x1350.jpg"><img src="carousel/slide-3-desktop-1920x720.jpg" alt=""></picture>
+</div><div class="dots" id="dots"></div></div>
+<section><h2>About</h2><p>Replace this with your content.</p></section>
+<script>
+var i=0,n=3,t=document.getElementById('track'),dots=document.getElementById('dots');
+for(var k=0;k<n;k++){(function(k){var b=document.createElement('button');b.onclick=function(){go(k)};dots.appendChild(b)})(k)}
+function go(x){i=x%n;t.style.transform='translateX('+(-100*i)+'%)';var b=dots.children;for(var j=0;j<n;j++){b[j].className=j===i?'on':''}}
+go(0);setInterval(function(){go(i+1)},5000);
+</script></body></html>
