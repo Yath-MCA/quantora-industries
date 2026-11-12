@@ -1,6 +1,6 @@
 -- =============================================================================
 -- 00001_extensions_and_enums.sql
--- Extensions and shared enums for Insha Allah Traders ERP
+-- Extensions and shared enums for Quantora Industries ERP
 -- =============================================================================
 
 -- Prefer gen_random_uuid from pgcrypto/pg15+
@@ -197,4 +197,4 @@ CREATE TYPE public.party_type AS ENUM (
 );
 
 COMMENT ON TYPE public.document_type_code IS
-  'Short codes used in document numbering, e.g. IAT/2026-27/INV/0001';
+  'Short codes used in document numbering, e.g. QI/2026-27/INV/0001';

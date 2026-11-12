@@ -73,7 +73,7 @@ Expense categories (seeded): Rent, Electricity, Salary, Transport, Maintenance, 
 
 ## Numbering / PDF
 
-Use `next_document_number` for PO/GRN/expense/payment prefixes (`IAT/YYYY-YY/PO/0001`, etc.). PO A4 PDF: preview, download, storage.
+Use `next_document_number` for PO/GRN/expense/payment prefixes (`QI/YYYY-YY/PO/0001`, etc.). PO A4 PDF: preview, download, storage.
 
 ## API / data operations
 

@@ -82,7 +82,7 @@ Shared line-item editor, status badges, confirm dialogs (approve, issue, cancel)
 
 ## Numbering
 
-Use DB function `next_document_number(company_id, doc_type)` concurrency-safe. Format like `IAT/2026-27/INV/0001` (prefix from company settings). Unique per company + FY.
+Use DB function `next_document_number(company_id, doc_type)` concurrency-safe. Format like `QI/2026-27/INV/0001` (prefix from company settings). Unique per company + FY.
 
 ## PDF
 

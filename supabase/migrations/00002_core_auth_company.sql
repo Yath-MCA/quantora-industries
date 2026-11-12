@@ -27,7 +27,7 @@ CREATE TABLE public.companies (
   country         text NOT NULL DEFAULT 'IN',
   logo_path       text,
   signature_path  text,
-  invoice_prefix  text NOT NULL DEFAULT 'IAT',
+  invoice_prefix  text NOT NULL DEFAULT 'QI',
   is_active       boolean NOT NULL DEFAULT true,
   created_at      timestamptz NOT NULL DEFAULT now(),
   updated_at      timestamptz NOT NULL DEFAULT now(),
@@ -46,7 +46,7 @@ CREATE UNIQUE INDEX companies_gstin_uidx
   ON public.companies (gstin) WHERE gstin IS NOT NULL AND deleted_at IS NULL;
 CREATE INDEX companies_active_idx ON public.companies (is_active) WHERE deleted_at IS NULL;
 
-COMMENT ON TABLE public.companies IS 'Multi-tenant company master; seed company is Insha Allah Traders';
+COMMENT ON TABLE public.companies IS 'Multi-tenant company master; seed company is Quantora Industries';
 
 -- ---------------------------------------------------------------------------
 -- profiles (1:1 with auth.users)

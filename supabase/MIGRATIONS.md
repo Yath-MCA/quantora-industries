@@ -28,7 +28,7 @@ Ordered SQL migrations for the Phase 1 ERP schema. Filenames use a numeric prefi
 - Soft delete via `deleted_at` where appropriate
 - Unique business keys scoped by company (e.g. `(company_id, invoice_number)`)
 - Indian FY: 1 Apr – 31 Mar
-- Document numbers: `{prefix}/{fy}/{doc_type}/{padded_seq}` e.g. `IAT/2026-27/INV/0001`
+- Document numbers: `{prefix}/{fy}/{doc_type}/{padded_seq}` e.g. `QI/2026-27/INV/0001`
 - GST rates live in `gst_rates` (admin-configurable); SQL helper only chooses CGST+SGST vs IGST from state comparison
 
 ## Auth linkage

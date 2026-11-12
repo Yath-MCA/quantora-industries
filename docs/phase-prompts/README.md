@@ -24,7 +24,7 @@ Phase 1 (foundation: schema, RLS, auth, company settings, app shell) is already 
 
 ## Conventions (all phases)
 
-- Company: **Insha Allah Traders** (Partnership), prefix **IAT**, multi-tenant via `company_id` + RLS
+- Company: **Quantora Industries** (Partnership), prefix **QI**, multi-tenant via `company_id` + RLS
 - INR, Asia/Kolkata, DD/MM/YYYY display
 - GST rates from `gst_rates` — never hardcode tax rates as business truth
 - No service-role key in frontend (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` only)

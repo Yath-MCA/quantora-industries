@@ -1,5 +1,5 @@
 -- =============================================================================
--- seed.sql — Phase 1 foundation seed for Insha Allah Traders ERP
+-- seed.sql — Phase 1 foundation seed for Quantora Industries ERP
 --
 -- Applied automatically on `supabase db reset` (see config.toml [db.seed]).
 -- For a linked remote project: `psql` / SQL editor → run this file after migrations.
@@ -13,7 +13,7 @@
 --   INSERT INTO public.user_roles (user_id, company_id, role_id)
 --   VALUES (
 --     'USER_UUID',
---     'a0000000-0000-4000-8000-000000000001',  -- Insha Allah Traders
+--     'a0000000-0000-4000-8000-000000000001',  -- Quantora Industries
 --     'b0000000-0000-4000-8000-000000000001'   -- super_admin
 --   )
 --   ON CONFLICT (user_id, company_id, role_id) DO UPDATE
@@ -28,12 +28,12 @@
 
 -- Stable IDs for bootstrap scripts / docs
 -- Company
---   a0000000-0000-4000-8000-000000000001  Insha Allah Traders
+--   a0000000-0000-4000-8000-000000000001  Quantora Industries
 -- Roles b0000000-0000-4000-8000-00000000000N
 -- Warehouses / units / categories use c/d/e prefixes below
 
 -- ---------------------------------------------------------------------------
--- Company: Insha Allah Traders (Partnership, Tamil Nadu)
+-- Company: Quantora Industries (Partnership, Tamil Nadu)
 -- GSTIN/PAN left NULL — enter real values in Settings before production use.
 -- ---------------------------------------------------------------------------
 INSERT INTO public.companies (
@@ -41,12 +41,12 @@ INSERT INTO public.companies (
   invoice_prefix, city, address_line1, is_active
 ) VALUES (
   'a0000000-0000-4000-8000-000000000001',
-  'Insha Allah Traders',
-  'Insha Allah Traders',
+  'Quantora Industries',
+  'Quantora Industries',
   'partnership',
   'TN',
   'IN',
-  'IAT',
+  'QI',
   NULL,
   NULL,
   true

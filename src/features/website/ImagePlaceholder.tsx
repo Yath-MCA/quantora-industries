@@ -19,13 +19,13 @@ function PlaceholderPanel({
   return (
     <div
       className={cn(
-        'relative flex size-full items-center justify-center bg-[linear-gradient(135deg,oklch(0.38_0.025_250)_0%,oklch(0.48_0.03_245)_42%,oklch(0.34_0.02_255)_100%)]',
+        'relative flex size-full items-center justify-center bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy-dark',
         className,
       )}
       aria-hidden
     >
       <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(oklch(0.9_0.01_250_/0.4)_1px,transparent_1px),linear-gradient(90deg,oklch(0.9_0.01_250_/0.4)_1px,transparent_1px)] [background-size:40px_40px]" />
-      <span className="relative px-4 text-center text-sm font-medium tracking-wide text-slate-200/90 md:text-base">
+      <span className="relative px-4 text-center text-sm font-medium tracking-wide text-brand-silver/90 md:text-base">
         {label}
       </span>
     </div>
@@ -35,6 +35,7 @@ function PlaceholderPanel({
 /** Prefix with Vite `base` so GitHub Pages (and local with base) resolve public assets. */
 function withBase(src: string) {
   if (/^https?:\/\//i.test(src)) return src
+  if (src.startsWith(import.meta.env.BASE_URL)) return src
   return `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`
 }
 
@@ -68,7 +69,7 @@ export function ImagePlaceholder({
   const currentSrc = candidates[index]
 
   return (
-    <div className={cn('relative overflow-hidden bg-slate-700', className)}>
+    <div className={cn('relative overflow-hidden bg-brand-navy-dark', className)}>
       {!loaded || failed ? <PlaceholderPanel label={label} /> : null}
       {!failed && currentSrc ? (
         <img

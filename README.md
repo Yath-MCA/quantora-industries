@@ -1,6 +1,6 @@
-# Insha Allah Traders
+# Quantora Industries
 
-Public company website plus multi-tenant React + Supabase ERP for **Insha Allah Traders** (Tamil Nadu sheet-metal manufacturing). Visitors use `/` for the manufacturing profile; staff enter the ERP only via `/login` → `/app`. Phase 1 delivers foundation: full database schema/RLS, auth + RBAC, company settings shell, and a compiling app.
+Public company website plus multi-tenant React + Supabase ERP for **Quantora Industries** (Tamil Nadu sheet-metal manufacturing). Visitors use `/` for the manufacturing profile; staff enter the ERP only via `/login` → `/app`. Phase 1 delivers foundation: full database schema/RLS, auth + RBAC, company settings shell, and a compiling app.
 
 This product assists bookkeeping and GST-aware invoicing. **It is not a substitute for a Chartered Accountant or tax professional.** GST rates are admin-configurable; there is **no GST filing API**.
 
@@ -110,7 +110,7 @@ npm run build
 
 The public site (and ERP UI) deploy to **GitHub Pages** from `dist/` via Actions — not from the branch source tree.
 
-**Live URL:** [https://Yath-MCA.github.io/insha-allah-traders/](https://Yath-MCA.github.io/insha-allah-traders/)
+**Live URL:** [https://Yath-MCA.github.io/quantora-industries/](https://Yath-MCA.github.io/quantora-industries/)
 
 ### One-time repo setup
 
@@ -119,12 +119,12 @@ The public site (and ERP UI) deploy to **GitHub Pages** from `dist/` via Actions
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
 3. **Supabase → Authentication → URL configuration** — add redirect URLs for the Pages origin, for example:
-   - Site URL (or additional): `https://Yath-MCA.github.io/insha-allah-traders`
+   - Site URL (or additional): `https://Yath-MCA.github.io/quantora-industries`
    - Redirect URLs:
-     - `https://Yath-MCA.github.io/insha-allah-traders/**`
-     - `https://Yath-MCA.github.io/insha-allah-traders/reset-password`
+     - `https://Yath-MCA.github.io/quantora-industries/**`
+     - `https://Yath-MCA.github.io/quantora-industries/reset-password`
 
-Vite `base` and React Router `basename` are set to `/insha-allah-traders/`. Pushing to `main` runs [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) (build + `404.html` SPA fallback + deploy). You can also run the workflow manually (**Actions → Deploy GitHub Pages → Run workflow**).
+Vite `base` and React Router `basename` are set to `/quantora-industries/`. Pushing to `main` runs [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) (build + `404.html` SPA fallback + deploy). You can also run the workflow manually (**Actions → Deploy GitHub Pages → Run workflow**).
 
 `/app` login on the live site needs the secrets above and matching Auth redirect URLs; without them the UI may load but Supabase auth will fail.
 
@@ -140,7 +140,7 @@ Seed creates company, roles, permissions, warehouses, UOMs, etc. It does **not**
 INSERT INTO public.user_roles (user_id, company_id, role_id)
 VALUES (
   'USER_UUID',
-  'a0000000-0000-4000-8000-000000000001',  -- Insha Allah Traders
+  'a0000000-0000-4000-8000-000000000001',  -- Quantora Industries
   'b0000000-0000-4000-8000-000000000001'   -- super_admin
 )
 ON CONFLICT (user_id, company_id, role_id) DO UPDATE
@@ -202,7 +202,7 @@ Unauthenticated `/app/*` redirects to `/login`. Authenticated `/login` redirects
 - **Logical dump:** use the database connection string from Settings → Database:
 
 ```bash
-pg_dump "$DATABASE_URL" --format=custom --file=iat-$(date +%Y%m%d).dump
+pg_dump "$DATABASE_URL" --format=custom --file=qi-$(date +%Y%m%d).dump
 ```
 
 - Keep Storage bucket contents (`company-assets`, `documents`, etc.) in your backup plan separately if needed.
@@ -226,4 +226,4 @@ supabase/
 
 ## License / ownership
 
-Private project for Insha Allah Traders operations.
+Private project for Quantora Industries operations.

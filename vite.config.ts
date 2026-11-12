@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/insha-allah-traders/',
+  base: '/quantora-industries/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

@@ -46,7 +46,7 @@ export function HomePage() {
     {
       title: 'Invoice prefix',
       value: company?.invoice_prefix ?? '—',
-      hint: 'Example: IAT/2026-27/INV/0001',
+      hint: 'Example: QI/2026-27/INV/0001',
       icon: FileText,
     },
   ]

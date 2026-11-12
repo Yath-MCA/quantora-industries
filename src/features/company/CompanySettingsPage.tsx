@@ -98,7 +98,7 @@ export function CompanySettingsPage() {
       district: company?.district ?? '',
       state_code: company?.state_code ?? 'TN',
       pincode: company?.pincode ?? '',
-      invoice_prefix: company?.invoice_prefix ?? 'IAT',
+      invoice_prefix: company?.invoice_prefix ?? 'QI',
       invoice_terms: settingsQuery.data?.invoice_terms ?? '',
       invoice_notes: settingsQuery.data?.invoice_notes ?? '',
       default_payment_terms_days:

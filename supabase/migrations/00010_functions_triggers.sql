@@ -225,7 +225,7 @@ END;
 $$;
 
 COMMENT ON FUNCTION public.next_document_number(uuid, public.document_type_code, date) IS
-  'Returns concurrency-safe numbers like IAT/2026-27/INV/0001 using row lock on document_sequences.';
+  'Returns concurrency-safe numbers like QI/2026-27/INV/0001 using row lock on document_sequences.';
 
 GRANT EXECUTE ON FUNCTION public.next_document_number(uuid, public.document_type_code, date) TO authenticated;
 

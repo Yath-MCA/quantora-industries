@@ -53,7 +53,7 @@ export function AppShell() {
               ERP
             </span>
             <span className="truncate text-sm font-semibold leading-tight">
-              {company?.trade_name || company?.legal_name || 'Insha Allah Traders'}
+              {company?.trade_name || company?.legal_name || 'Quantora Industries'}
             </span>
           </Link>
           {financialYear ? (
@@ -123,7 +123,7 @@ export function AppShell() {
           <Separator orientation="vertical" className="h-5" />
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-medium">
-              {company?.legal_name || 'Insha Allah Traders'}
+              {company?.legal_name || 'Quantora Industries'}
             </p>
             <p className="truncate text-xs text-muted-foreground">
               {financialYear ? `Financial year ${financialYear.label}` : 'No FY selected'}

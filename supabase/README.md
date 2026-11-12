@@ -1,4 +1,4 @@
-# Supabase — Insha Allah Traders ERP
+# Supabase — Quantora Industries ERP
 
 PostgreSQL schema, RLS, storage, and seed for Phase 1.
 
@@ -57,7 +57,7 @@ Seed creates **company**, **roles**, **permissions**, **warehouses**, **UOMs**, 
 INSERT INTO public.user_roles (user_id, company_id, role_id)
 VALUES (
   'USER_UUID',
-  'a0000000-0000-4000-8000-000000000001',  -- Insha Allah Traders
+  'a0000000-0000-4000-8000-000000000001',  -- Quantora Industries
   'b0000000-0000-4000-8000-000000000001'   -- super_admin
 )
 ON CONFLICT (user_id, company_id, role_id) DO UPDATE
@@ -74,12 +74,12 @@ Signup automatically creates a `profiles` row (`profiles.id = auth.users.id`) vi
 
 | Item | Detail |
 |------|--------|
-| Company | Insha Allah Traders, Partnership, TN, prefix **IAT** |
+| Company | Quantora Industries, Partnership, TN, prefix **QI** |
 | GSTIN/PAN | Left empty — set in Settings before production |
 | GST rates | Empty (no hardcoded tax truth). Optional sample rows commented in `seed.sql` |
 | Warehouses | RM, WIP, FG, Tool Room, Scrap |
 | Roles | Super Admin, Partner, Admin, Accountant, Sales, Purchase, Store Manager, Production Manager, Quality Manager, Viewer |
-| Numbering | `next_document_number()` → e.g. `IAT/2026-27/INV/0001` (FY Apr–Mar IST) |
+| Numbering | `next_document_number()` → e.g. `QI/2026-27/INV/0001` (FY Apr–Mar IST) |
 
 Disclaimer: this system is not a substitute for a CA or tax professional.
 

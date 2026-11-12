@@ -67,7 +67,7 @@ export function LoginPage() {
             ERP
           </p>
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">
-            Insha Allah Traders
+            Quantora Industries
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Sheet-metal manufacturing operations
